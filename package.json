@@ -4,6 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "concurrently \"next dev\" \"jest --watch\"",
+    "devAll": "concurrently \"next dev\" \"jest --watch\" \"cypress open\"",
+    "cypress": "cypress open",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
