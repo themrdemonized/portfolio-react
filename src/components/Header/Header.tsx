@@ -1,12 +1,27 @@
+import { Sheet } from "@mui/joy"
+import styles from "./Header.module.scss"
+import RouterLink from "@/components/RouterLink/RouterLink"
+import DarkModeToggler from "../DarkModeToggler/DarkModeToggler"
+
 export default function Header() {
 	return (
 		<header
-			className="text-center justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30"
 		>
-			<p>
-				Get started by editing&nbsp;
-				<code className="font-mono font-bold">src/pages/index.tsx</code>
-			</p>
+			<Sheet
+				variant="outlined"
+				className="p-4 flex items-center justify-between"
+			>
+				<Sheet
+					className={`flex items-center gap-4`}
+				>
+					<RouterLink href="/">Home</RouterLink>
+					<RouterLink href="/portfolio">Portfolio</RouterLink>
+					<RouterLink href="/hobbies">Hobbies</RouterLink>
+				</Sheet>
+				<Sheet>
+					<DarkModeToggler />
+				</Sheet>
+			</Sheet>
 		</header>
 	)
 }

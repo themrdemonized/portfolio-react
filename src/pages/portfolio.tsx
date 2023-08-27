@@ -1,11 +1,11 @@
 import Animatable from "@/components/Animatable"
 
-export default function Home() {
+export default function Portfolio() {
 	return (
 		<Animatable>
 			<div>
 				<h1>
-					This is home page
+					This is portfolio page
 				</h1>
 			</div>
 		</Animatable>
