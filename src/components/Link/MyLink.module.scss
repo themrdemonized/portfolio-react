@@ -1,0 +1,9 @@
+.link {
+	transition: all 0.2s ease-in-out;
+	text-decoration: none!important;
+	padding-bottom: 1px;
+	border-bottom: 1px solid transparent;
+	&:hover, &:active, &.active {
+		border-bottom: 1px solid rgba(var(--joy-palette-primary-mainChannel) / 1)
+	}
+}

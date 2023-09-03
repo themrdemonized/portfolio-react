@@ -9,11 +9,11 @@ import Head from 'next/head'
 import '@fontsource/inter';
 import { AnimatePresence } from 'framer-motion'
 import { Sheet } from "@mui/joy"
+import { DictionaryContext } from '@/dictionary/DictionaryContext'
 
 export default function App({ Component, pageProps }: AppProps) {
 	return (
-	<>
-		<CssVarsProvider>
+			<CssVarsProvider>
 			<CssBaseline />
 			<Head>
 				<meta name="viewport" content="initial-scale=1, width=device-width" />
@@ -21,16 +21,22 @@ export default function App({ Component, pageProps }: AppProps) {
 				<Header />
 					<Sheet 
 						component="main"
-						className={`flex min-h-screen flex-col items-center justify-between p-24`}>
+						className={`flex min-h-screen flex-col items-center justify-between p-4 sm:p-16`}
+					>
 						<AnimatePresence
 							mode='wait'
 							// initial={false}
 						>
-							<Component {...pageProps} />
+							{/* <DictionaryContext.Provider value='en'> */}
+								<Sheet
+									className={`max-w-2xl w-full`}
+								>
+									<Component {...pageProps} />
+								</Sheet>
+							{/* </DictionaryContext.Provider> */}
 						</AnimatePresence>
 					</Sheet>
 				<Footer />
 		</CssVarsProvider>
-	</>
 	)
 }
