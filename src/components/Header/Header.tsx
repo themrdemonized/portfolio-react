@@ -2,8 +2,11 @@ import { Sheet } from "@mui/joy"
 import styles from "./Header.module.scss"
 import RouterLink from "@/components/RouterLink/RouterLink"
 import DarkModeToggler from "../DarkModeToggler/DarkModeToggler"
+import { useDict } from "@/dictionary/DictionaryContext"
+import LanguageToggler from "../LanguageToggler/LanguageToggler"
 
 export default function Header() {
+	let {dict, context} = useDict()
 	return (
 		<header
 		>
@@ -14,9 +17,12 @@ export default function Header() {
 				<Sheet
 					className={`flex items-center gap-4`}
 				>
-					<RouterLink href="/">Home</RouterLink>
-					<RouterLink href="/portfolio">Portfolio</RouterLink>
-					<RouterLink href="/hobbies">Hobbies</RouterLink>
+					<RouterLink href="/">{dict.header.home}</RouterLink>
+					<RouterLink href="/portfolio">{dict.header.portfolio}</RouterLink>
+					<RouterLink href="/hobbies">{dict.header.hobbies}</RouterLink>
+				</Sheet>
+				<Sheet>
+					<LanguageToggler />
 				</Sheet>
 				<Sheet>
 					<DarkModeToggler />
