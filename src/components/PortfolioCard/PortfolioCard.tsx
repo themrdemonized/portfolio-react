@@ -1,13 +1,18 @@
+import { useDict } from "@/dictionary/DictionaryContext"
 import { AspectRatio, Card, CardContent, Typography } from "@mui/joy"
 
 interface PortfolioCardProps {
   title: string,
   subtitle?: string,
   images: React.ReactNode,
-  description: string | React.ReactNode
+  description: string | React.ReactNode,
+  stack: string,
+  date: string,
+  links?: React.ReactNode
 }
 
 export default function PortfolioCard(props: PortfolioCardProps) {
+  const {dict} = useDict()
   return (
     <Card variant="outlined" sx={{
       width: `100%`,
@@ -18,7 +23,10 @@ export default function PortfolioCard(props: PortfolioCardProps) {
         {props.images}
       </AspectRatio>
       <CardContent>
-        {props.description}
+        <p>{props.description}</p>
+        <p>{dict.stack}: {props.stack}</p>
+        <p>{dict.devdate}: {props.date}</p>
+        <p>{props.links}</p>
       </CardContent>
     </Card>
   )

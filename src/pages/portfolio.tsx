@@ -1,8 +1,10 @@
 import Animatable from "@/components/Animatable"
 import PortfolioCard from "@/components/PortfolioCard/PortfolioCard"
+import { useDict } from "@/dictionary/DictionaryContext"
 import { Typography } from "@mui/joy"
 
 export default function Portfolio() {
+	const {dict} = useDict()
 	return (
 		<Animatable>
 			<Typography level="h1" marginBottom={4}>
@@ -10,8 +12,10 @@ export default function Portfolio() {
 			</Typography>
 			<div className="flex flex-col gap-6">
 				<PortfolioCard
-					title="This Portfolio"
-					description="Portfolio itself"
+					title={dict.portfolio.portfolio_site.title}
+					description={dict.portfolio.portfolio_site.description}
+					stack={dict.portfolio.portfolio_site.stack}
+					date={dict.portfolio.portfolio_site.date}
 					images={
 						<img
 							src="https://images.unsplash.com/photo-1527549993586-dff825b37782?auto=format&fit=crop&w=286"
@@ -20,14 +24,105 @@ export default function Portfolio() {
 							alt=""
 						/>
 					}
-				></PortfolioCard>
+				/>
 				<PortfolioCard
-					title="This Portfolio"
-					description="Portfolio itself"
+					title={dict.portfolio.rescript_elements.title}
+					description={dict.portfolio.rescript_elements.description}
+					stack={dict.portfolio.rescript_elements.stack}
+					date={dict.portfolio.rescript_elements.date}
 					images={
-						<></>
+						<img
+							src="https://images.unsplash.com/photo-1527549993586-dff825b37782?auto=format&fit=crop&w=286"
+							srcSet="https://images.unsplash.com/photo-1527549993586-dff825b37782?auto=format&fit=crop&w=286&dpr=2 2x"
+							loading="lazy"
+							alt=""
+						/>
 					}
-				></PortfolioCard>
+				/>
+				<PortfolioCard
+					title={dict.portfolio.dvipraz.title}
+					description={dict.portfolio.dvipraz.description}
+					stack={dict.portfolio.dvipraz.stack}
+					date={dict.portfolio.dvipraz.date}
+					images={
+						<img
+							src="https://images.unsplash.com/photo-1527549993586-dff825b37782?auto=format&fit=crop&w=286"
+							srcSet="https://images.unsplash.com/photo-1527549993586-dff825b37782?auto=format&fit=crop&w=286&dpr=2 2x"
+							loading="lazy"
+							alt=""
+						/>
+					}
+				/>
+				<PortfolioCard
+					title={dict.portfolio.dvipraz_lk.title}
+					description={dict.portfolio.dvipraz_lk.description}
+					stack={dict.portfolio.dvipraz_lk.stack}
+					date={dict.portfolio.dvipraz_lk.date}
+					images={
+						<img
+							src="https://images.unsplash.com/photo-1527549993586-dff825b37782?auto=format&fit=crop&w=286"
+							srcSet="https://images.unsplash.com/photo-1527549993586-dff825b37782?auto=format&fit=crop&w=286&dpr=2 2x"
+							loading="lazy"
+							alt=""
+						/>
+					}
+				/>
+				<PortfolioCard
+					title={dict.portfolio.uipdv.title}
+					description={dict.portfolio.uipdv.description}
+					stack={dict.portfolio.uipdv.stack}
+					date={dict.portfolio.uipdv.date}
+					images={
+						<img
+							src="https://images.unsplash.com/photo-1527549993586-dff825b37782?auto=format&fit=crop&w=286"
+							srcSet="https://images.unsplash.com/photo-1527549993586-dff825b37782?auto=format&fit=crop&w=286&dpr=2 2x"
+							loading="lazy"
+							alt=""
+						/>
+					}
+				/>
+				<PortfolioCard
+					title={dict.portfolio.lstar.title}
+					description={dict.portfolio.lstar.description}
+					stack={dict.portfolio.lstar.stack}
+					date={dict.portfolio.lstar.date}
+					images={
+						<img
+							src="https://images.unsplash.com/photo-1527549993586-dff825b37782?auto=format&fit=crop&w=286"
+							srcSet="https://images.unsplash.com/photo-1527549993586-dff825b37782?auto=format&fit=crop&w=286&dpr=2 2x"
+							loading="lazy"
+							alt=""
+						/>
+					}
+				/>
+				<PortfolioCard
+					title={dict.portfolio.vss.title}
+					description={dict.portfolio.vss.description}
+					stack={dict.portfolio.vss.stack}
+					date={dict.portfolio.vss.date}
+					images={
+						<img
+							src="https://images.unsplash.com/photo-1527549993586-dff825b37782?auto=format&fit=crop&w=286"
+							srcSet="https://images.unsplash.com/photo-1527549993586-dff825b37782?auto=format&fit=crop&w=286&dpr=2 2x"
+							loading="lazy"
+							alt=""
+						/>
+					}
+				/>
+				<PortfolioCard
+					title={dict.portfolio.asiazip.title}
+					description={dict.portfolio.asiazip.description}
+					stack={dict.portfolio.asiazip.stack}
+					date={dict.portfolio.asiazip.date}
+					images={
+						<img
+							src="https://images.unsplash.com/photo-1527549993586-dff825b37782?auto=format&fit=crop&w=286"
+							srcSet="https://images.unsplash.com/photo-1527549993586-dff825b37782?auto=format&fit=crop&w=286&dpr=2 2x"
+							loading="lazy"
+							alt=""
+						/>
+					}
+				/>
 			</div>
 		</Animatable>
 	)

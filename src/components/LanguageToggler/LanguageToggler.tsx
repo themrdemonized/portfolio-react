@@ -28,7 +28,7 @@ export default function LanguageToggler() {
 
   return (
     <Typography component="label" endDecorator={switchEl}>
-      Switch Language
+      {context.state}
     </Typography>
   )
 }

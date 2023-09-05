@@ -22,10 +22,12 @@ export default function Header() {
 					<RouterLink href="/hobbies">{dict.header.hobbies}</RouterLink>
 				</Sheet>
 				<Sheet>
-					<LanguageToggler />
-				</Sheet>
-				<Sheet>
-					<DarkModeToggler />
+					<Sheet
+						className={`flex items-center gap-4`}
+					>
+						<LanguageToggler />
+						<DarkModeToggler />
+					</Sheet>
 				</Sheet>
 			</Sheet>
 		</header>
