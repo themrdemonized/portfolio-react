@@ -1,10 +1,12 @@
 import { useDict } from "@/dictionary/DictionaryContext"
 import { AspectRatio, Card, CardContent, Typography } from "@mui/joy"
+import { Slide } from "yet-another-react-lightbox"
+import YARLCarousel from "../YARLCarousel/YARLCarousel"
 
 interface PortfolioCardProps {
   title: string,
   subtitle?: string,
-  images: React.ReactNode,
+  images: Slide[],
   description: string | React.ReactNode,
   stack: string,
   date: string,
@@ -20,7 +22,9 @@ export default function PortfolioCard(props: PortfolioCardProps) {
       <Typography level="title-lg">{props.title}</Typography>
       <Typography level="body-sm">{props.subtitle}</Typography>
       <AspectRatio ratio={"16/9"} >
-        {props.images}
+        <YARLCarousel
+          slides={props.images}
+        />
       </AspectRatio>
       <CardContent>
         <p>{props.description}</p>

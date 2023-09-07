@@ -13,6 +13,8 @@ describe('LanguageToggler', () => {
 				<LanguageToggler />
 			</DictProvider>
 		);
+
+		expect(container).toBeInTheDocument();
 	})
 
 	// it('switches dictionary', () => {
