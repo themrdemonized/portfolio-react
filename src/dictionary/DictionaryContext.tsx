@@ -3,7 +3,6 @@ import { useRouter } from 'next/router'
 import en from "@/dictionary/data/en"
 import ru from "@/dictionary/data/ru"
 
-// Define the initial state and action types
 export type Language = "en" | "ru";
 
 type Action = {
@@ -11,13 +10,11 @@ type Action = {
   language: Language
 }
 
-// Create the context
 const DictContext = createContext<{
   state: Language
   dispatch: Dispatch<Action>
 } | undefined>(undefined);
 
-// Create the reducer function
 const dictReducer = (state: Language, action: Action): Language => {
   switch (action.type) {
     case 'SwitchLanguage':
@@ -27,19 +24,17 @@ const dictReducer = (state: Language, action: Action): Language => {
   }
 };
 
-// Create a context provider component
 type DictProviderProps = {
   children: ReactNode
 };
 
 function DictSwitcherOnMount() {
-  const r = useRouter()
 	let {context} = useDict()
 
 	useEffect(() => {
 		let lang: Language;
 		const locale = window.navigator.language
-		if (locale?.includes('ru')) {
+		if (locale.includes('ru')) {
 			lang = 'ru'
 		} else {
 			lang = 'en'

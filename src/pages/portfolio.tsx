@@ -1,14 +1,10 @@
 import Animatable from "@/components/Animatable"
 import PortfolioCard from "@/components/PortfolioCard/PortfolioCard"
 import { useDict } from "@/dictionary/DictionaryContext"
-import { SvgIcon, Typography } from "@mui/joy"
+import { Typography } from "@mui/joy"
 
-import Image from "next/image"
-import YARLImageSlide from "@/components/YARLImageSlide/YARLImageSlide"
-import { Lightbox } from "yet-another-react-lightbox"
 import "yet-another-react-lightbox/styles.css";
 import "yet-another-react-lightbox/plugins/thumbnails.css";
-import { Thumbnails, Inline } from "yet-another-react-lightbox/plugins"
 import portfolioPic from "@/../public/assets/portfolio_preview.jpg"
 import rescriptPic1 from "@/../public/assets/rescript_preview.jpg"
 import rescriptPic2 from "@/../public/assets/rescript_preview2.jpg"
@@ -33,8 +29,6 @@ import asiazipPic1 from "@/../public/assets/asiazip1.jpg"
 import asiazipPic2 from "@/../public/assets/asiazip2.jpg"
 import asiazipPic3 from "@/../public/assets/asiazip3.jpg"
 
-import { useState } from "react"
-import YARLCarousel from "@/components/YARLCarousel/YARLCarousel"
 import MyLink from "@/components/Link/MyLink"
 
 import Github from "@mui/icons-material/GitHub"
