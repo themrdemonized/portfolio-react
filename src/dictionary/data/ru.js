@@ -7,6 +7,7 @@ export default {
     hobbies: "Хобби"
   },
   portfolio: {
+    title: 'Мое портфолио',
     portfolio_site: {
       title: "Портфолио",
       description: "Сайт обо мне и моей работе",

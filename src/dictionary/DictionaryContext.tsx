@@ -1,23 +1,24 @@
-import { createContext, useContext, useReducer, ReactNode, Dispatch, FC } from "react"
+import { createContext, useContext, useReducer, ReactNode, Dispatch, FC, useEffect } from "react"
+import { useRouter } from 'next/router'
 import en from "@/dictionary/data/en"
 import ru from "@/dictionary/data/ru"
 
 // Define the initial state and action types
-type State = "en" | "ru";
+export type Language = "en" | "ru";
 
 type Action = {
   type: "SwitchLanguage",
-  language: State
+  language: Language
 }
 
 // Create the context
 const DictContext = createContext<{
-  state: State;
-  dispatch: Dispatch<Action>;
+  state: Language
+  dispatch: Dispatch<Action>
 } | undefined>(undefined);
 
 // Create the reducer function
-const dictReducer = (state: State, action: Action): State => {
+const dictReducer = (state: Language, action: Action): Language => {
   switch (action.type) {
     case 'SwitchLanguage':
       return action.language;
@@ -28,14 +29,36 @@ const dictReducer = (state: State, action: Action): State => {
 
 // Create a context provider component
 type DictProviderProps = {
-  children: ReactNode;
+  children: ReactNode
 };
+
+function DictSwitcherOnMount() {
+  const r = useRouter()
+	let {context} = useDict()
+
+	useEffect(() => {
+		let lang: Language;
+		const locale = window.navigator.language
+		if (locale?.includes('ru')) {
+			lang = 'ru'
+		} else {
+			lang = 'en'
+		}
+		context.dispatch({
+			language: lang,
+			type: 'SwitchLanguage'
+		})
+	}, [])
+
+  return <></>
+}
 
 export const DictProvider: FC<DictProviderProps> = ({children}) => {
   const [state, dispatch] = useReducer(dictReducer, "en");
 
   return (
     <DictContext.Provider value={{ state, dispatch }}>
+      <DictSwitcherOnMount />
       {children}
     </DictContext.Provider>
   );

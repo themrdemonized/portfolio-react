@@ -28,7 +28,6 @@ export default function App({ Component, pageProps }: AppProps) {
 								mode='wait'
 								// initial={false}
 							>
-								
 									<Sheet
 										className={`max-w-2xl w-full`}
 									>

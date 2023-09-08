@@ -45,7 +45,7 @@ export default function Portfolio() {
 	return (
 		<Animatable>
 			<Typography level="h1" marginBottom={4}>
-				My Portfolio
+				{dict.portfolio.title}
 			</Typography>
 			<div className="flex flex-col gap-6">
 				<PortfolioCard
@@ -56,12 +56,12 @@ export default function Portfolio() {
 					images={[portfolioPic]}
 					links={
 						<>
-							<p>
+							<div>
 								<MyLink target="_blank" rel="noopener noreferrer" href="fdfs">
 									<Github />
 									<span>Github</span>
 								</MyLink>
-							</p>
+							</div>
 						</>
 					}
 				/>
@@ -73,18 +73,18 @@ export default function Portfolio() {
 					images={[rescriptPic1, rescriptPic2, rescriptPic3]}
 					links={
 						<>
-							<p>
+							<div>
 								<MyLink target="_blank" rel="noopener noreferrer" href="https://react-nextjs-rescript-elements.vercel.app/">
 									<Link />
 									<span>Demo</span>
 								</MyLink>
-							</p>
-							<p>
+							</div>
+							<div>
 								<MyLink target="_blank" rel="noopener noreferrer" href="https://github.com/themrdemonized/react-nextjs-rescript-elements">
 									<Github />
 									<span>Github</span>
 								</MyLink>
-							</p>
+							</div>
 						</>
 					}
 				/>
@@ -96,18 +96,18 @@ export default function Portfolio() {
 					images={[dviprazPic1, dviprazPic2]}
 					links={
 						<>
-							<p>
+							<div>
 								<MyLink target="_blank" rel="noopener noreferrer" href="https://dvipraz.ru/">
 									<Link />
 									<span>Demo</span>
 								</MyLink>
-							</p>
-							<p>
+							</div>
+							<div>
 								<MyLink target="_blank" rel="noopener noreferrer" href="https://github.com/themrdemonized/dvipras">
 									<Github />
 									<span>Github</span>
 								</MyLink>
-							</p>
+							</div>
 						</>
 					}
 				/>
@@ -132,18 +132,18 @@ export default function Portfolio() {
 					images={[uipPic1, uipPic2, uipPic3]}
 					links={
 						<>
-							<p>
+							<div>
 								<MyLink target="_blank" rel="noopener noreferrer" href="https://uipdv.ru">
 									<Link />
 									<span>Demo</span>
 								</MyLink>
-							</p>
-							<p>
+							</div>
+							<div>
 								<MyLink target="_blank" rel="noopener noreferrer" href="https://github.com/themrdemonized/UIP-Laravel">
 									<Github />
 									<span>Github</span>
 								</MyLink>
-							</p>
+							</div>
 						</>
 					}
 				/>
@@ -155,18 +155,18 @@ export default function Portfolio() {
 					images={[lstarPic1, lstarPic2, lstarPic3]}
 					links={
 						<>
-							<p>
+							<div>
 								<MyLink target="_blank" rel="noopener noreferrer" href="https://l-star.ru">
 									<Link />
 									<span>Demo</span>
 								</MyLink>
-							</p>
-							<p>
+							</div>
+							<div>
 								<MyLink target="_blank" rel="noopener noreferrer" href="https://github.com/themrdemonized/Little-Star-Store-OpenCart">
 									<Github />
 									<span>Github</span>
 								</MyLink>
-							</p>
+							</div>
 						</>
 					}
 				/>
@@ -178,12 +178,12 @@ export default function Portfolio() {
 					images={[vssPic1, vssPic2, vssPic3]}
 					links={
 						<>
-							<p>
+							<div>
 								<MyLink target="_blank" rel="noopener noreferrer" href="https://ventstroysnab.ru/">
 									<Link />
 									<span>Demo</span>
 								</MyLink>
-							</p>
+							</div>
 						</>
 					}
 				/>
@@ -195,12 +195,12 @@ export default function Portfolio() {
 					images={[asiazipPic1, asiazipPic2, asiazipPic3]}
 					links={
 						<>
-							<p>
+							<div>
 								<MyLink target="_blank" rel="noopener noreferrer" href="https://asiazip.ru">
 									<Link />
 									<span>Demo</span>
 								</MyLink>
-							</p>
+							</div>
 						</>
 					}
 				/>

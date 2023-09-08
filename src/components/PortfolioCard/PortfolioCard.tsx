@@ -30,7 +30,7 @@ export default function PortfolioCard(props: PortfolioCardProps) {
         <p>{props.description}</p>
         <p>{dict.stack}: {props.stack}</p>
         <p>{dict.devdate}: {props.date}</p>
-        <p>{props.links}</p>
+        <div>{props.links}</div>
       </CardContent>
     </Card>
   )
