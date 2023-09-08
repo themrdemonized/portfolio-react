@@ -6,4 +6,9 @@
 	&:hover, &:active, &.active {
 		border-bottom: 1px solid rgba(var(--joy-palette-primary-mainChannel) / 1)
 	}
+	display: inline-block;
+	> * + * {
+		vertical-align: middle;
+		margin-left: 8px;
+	}
 }
