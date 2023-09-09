@@ -6,12 +6,12 @@ import { useDict } from "@/dictionary/DictionaryContext"
 import LanguageToggler from "../LanguageToggler/LanguageToggler"
 
 export default function Header() {
-	let {dict, context} = useDict()
+	let {dict} = useDict()
 	return (
 		<header
+			className={`${styles.header}`}
 		>
 			<Sheet
-				variant="outlined"
 				className="p-4 flex items-center justify-between"
 			>
 				<Sheet
