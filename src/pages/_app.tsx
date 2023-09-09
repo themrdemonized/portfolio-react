@@ -13,7 +13,10 @@ import { DictProvider } from '@/dictionary/DictionaryContext'
 
 export default function App({ Component, pageProps }: AppProps) {
 	return (
-			<CssVarsProvider>
+			<CssVarsProvider
+				defaultMode='system'
+				modeStorageKey='system-theme-mode-key'
+			>
 			<CssBaseline />
 			<Head>
 				<meta name="viewport" content="initial-scale=1, width=device-width" />
