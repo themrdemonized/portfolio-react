@@ -54,7 +54,7 @@ export default function Portfolio() {
 						links={
 							<>
 								<div>
-									<MyLink target="_blank" rel="noopener noreferrer" href="fdfs">
+									<MyLink target="_blank" rel="noopener noreferrer" href="https://github.com/themrdemonized/portfolio-react">
 										<Github />
 										<span>Github</span>
 									</MyLink>

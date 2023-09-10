@@ -2,11 +2,12 @@ import Animatable from "@/components/Animatable"
 import { useDict } from "@/dictionary/DictionaryContext"
 import { getHeadTags } from "./_app"
 import { List, ListItem, Typography } from "@mui/joy"
+import ProfilePicWithLinks from "@/components/ProfilePicWithLinks/ProfilePicWithLinks"
 
 export default function Home() {
 	const {dict} = useDict()
 	const nl2p = (text: string) => {
-		const lines = text.split("\n")
+		const lines = text.trim().split("\n")
 		const newLines = lines.map((value, index) => <Typography level="body-md" marginBottom={1} key={value}>{value}</Typography>)
 		return newLines
 	}
@@ -29,6 +30,9 @@ export default function Home() {
 		<>
 			{getHeadTags({title: dict.index.title})}
 			<Animatable>
+				<div className="mb-4 flex justify-center items-center">
+					<ProfilePicWithLinks/>
+				</div>
 				<div>
 					<Typography level="h1" marginBottom={8}>
 						{dict.index.hello}

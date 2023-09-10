@@ -1,6 +1,7 @@
 export default {
   stack: "Stack",
   devdate: "Development period",
+  name: "Dmitry Chernyavsky",
   head: {
     title: "Dmitry Chernyavsky",
   },
