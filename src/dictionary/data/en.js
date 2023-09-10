@@ -1,10 +1,48 @@
 export default {
   stack: "Stack",
   devdate: "Development period",
+  head: {
+    title: "Dmitry Chernyavsky",
+  },
   header: {
     home: "Home",
     portfolio: "Portfolio",
     hobbies: "Hobbies"
+  },
+  index: {
+    title: 'About me',
+    hello: 'Hello and welcome!',
+    skillsTitle: 'Skills:', 
+    skills: 
+`Vue
+React
+NextJS
+Typescript
+Rescript
+Javascript
+SASS/SCSS
+Docker
+Kubernetes, Helm
+Git, Perforce
+`,
+    didlist:
+`Developed web applications and websites utilizing modern frameworks
+Implemented responsive design principles to ensure optimal performance across various devices
+Worked with backend developers to integrate frontend components with server-side logic
+Participated in code reviews and provided constructive feedback to improve team codebase
+`,
+    textBegin: `
+My name is Dmitry Chernyavsky.
+I am a Frontend Developer with 5 years of experience.
+`,
+    textEnd: `
+I am very responsible on my tasks and goals, open for teamwork, open-minded, easy to collaborate and cowork with. I always strive to explore the latest technologies and enthusiastic to any ideas.
+
+As a hobby I like to work in game development, worked with Unreal Engine 5 and developed mods for X-Ray engine (C++, Lua). You can check out my hobbies at Hobbies page.
+`,
+  },
+  hobbies: {
+    title: 'My Hobbies'
   },
   portfolio: {
     title: 'My Portfolio',

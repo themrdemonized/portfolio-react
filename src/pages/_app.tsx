@@ -9,7 +9,22 @@ import Head from 'next/head'
 import '@fontsource/inter';
 import { AnimatePresence } from 'framer-motion'
 import { Sheet } from "@mui/joy"
-import { DictProvider } from '@/dictionary/DictionaryContext'
+import { DictProvider, useDict } from '@/dictionary/DictionaryContext'
+
+
+interface headTagsProps {
+	title?: string,
+}
+export function getHeadTags({title} : headTagsProps) {
+	const {dict} = useDict()
+	const headTitle = title ? `${title} | ${dict.head.title}` : `${dict.head.title}`
+	return (
+		<Head>
+			<title key="title">{headTitle}</title>
+			<meta property="og:title" content={headTitle} key="og:title" />
+		</Head>
+	)
+}
 
 export default function App({ Component, pageProps }: AppProps) {
 	return (
@@ -18,10 +33,10 @@ export default function App({ Component, pageProps }: AppProps) {
 				modeStorageKey='system-theme-mode-key'
 			>
 			<CssBaseline />
-			<Head>
-				<meta name="viewport" content="initial-scale=1, width=device-width" />
-			</Head>
 				<DictProvider>
+					<Head>
+						<meta name="viewport" content="initial-scale=1, width=device-width" />
+					</Head>
 					<Header />
 						<Sheet 
 							component="main"
