@@ -15,7 +15,7 @@ export default function Header() {
 				className="p-4 flex items-center justify-between"
 			>
 				<Sheet
-					className={`flex items-center gap-4`}
+					className={`flex items-center gap-2 md:gap-4`}
 				>
 					<RouterLink href="/">{dict.header.home}</RouterLink>
 					<RouterLink href="/portfolio">{dict.header.portfolio}</RouterLink>
