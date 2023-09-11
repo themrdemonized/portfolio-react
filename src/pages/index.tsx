@@ -1,6 +1,6 @@
 import Animatable from "@/components/Animatable"
 import { useDict } from "@/dictionary/DictionaryContext"
-import { getHeadTags } from "./_app"
+import { HeadTags } from "./_app"
 import { List, ListItem, Typography } from "@mui/joy"
 import ProfilePicWithLinks from "@/components/ProfilePicWithLinks/ProfilePicWithLinks"
 
@@ -28,9 +28,11 @@ export default function Home() {
 	}
 	return (
 		<>
-			{getHeadTags({title: dict.index.title})}
+			<HeadTags
+				title={dict.index.title}
+			/>
 			<Animatable>
-				<div className="mb-4 flex justify-center items-center">
+				<div className="mb-8 flex justify-center items-center">
 					<ProfilePicWithLinks/>
 				</div>
 				<div>

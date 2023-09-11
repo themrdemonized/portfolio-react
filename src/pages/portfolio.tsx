@@ -2,7 +2,7 @@ import Animatable from "@/components/Animatable"
 import PortfolioCard from "@/components/PortfolioCard/PortfolioCard"
 import { useDict } from "@/dictionary/DictionaryContext"
 import { Typography } from "@mui/joy"
-import { getHeadTags } from "./_app"
+import { HeadTags } from "./_app"
 
 import "yet-another-react-lightbox/styles.css";
 import "yet-another-react-lightbox/plugins/thumbnails.css";
@@ -39,7 +39,9 @@ export default function Portfolio() {
 	const {dict} = useDict()
 	return (
 		<>
-			{getHeadTags({title: dict.portfolio.title})}
+			<HeadTags
+				title={dict.portfolio.title}
+			/>
 			<Animatable>
 				<Typography level="h1" marginBottom={4}>
 					{dict.portfolio.title}

@@ -5,6 +5,7 @@ import LinkedIn from '@mui/icons-material/LinkedIn'
 import Github from '@mui/icons-material/GitHub'
 import MyLink from '../Link/MyLink'
 import styles from './ProfilePicWithLinks.module.scss'
+import { Typography } from '@mui/joy'
 
 export default function ProfilePicWithLinks() {
     const {dict} = useDict()
@@ -24,6 +25,9 @@ export default function ProfilePicWithLinks() {
                         />
                     </span>
                 </MyLink>
+                <Typography level='body-md' marginTop={2} textAlign={'center'}>
+                    {dict.name}
+                </Typography>
             </div>
             <div className='space-y-2'>
                 <MyLink 

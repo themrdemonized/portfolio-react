@@ -43,6 +43,7 @@ function DictSwitcherOnMount() {
 			language: lang,
 			type: 'SwitchLanguage'
 		})
+  // eslint-disable-next-line react-hooks/exhaustive-deps 
 	}, [])
 
   return <></>

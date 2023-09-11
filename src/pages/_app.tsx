@@ -15,7 +15,7 @@ import { DictProvider, useDict } from '@/dictionary/DictionaryContext'
 interface headTagsProps {
 	title?: string,
 }
-export function getHeadTags({title} : headTagsProps) {
+export function HeadTags({title} : headTagsProps) {
 	const {dict} = useDict()
 	const headTitle = title ? `${title} | ${dict.head.title}` : `${dict.head.title}`
 	return (
