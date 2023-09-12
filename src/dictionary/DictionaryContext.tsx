@@ -60,6 +60,13 @@ export const DictProvider: FC<DictProviderProps> = ({children}) => {
   );
 };
 
+export const getDictionaries = () => {
+  return [
+    {dict: en, name: "en"},
+    {dict: ru, name: "ru"},
+  ]
+}
+
 // Custom hook to easily access the context
 export const useDict = () => {
   const context = useContext(DictContext);

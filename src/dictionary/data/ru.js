@@ -42,9 +42,6 @@ Git, Perforce
 В качестве хобби люблю заниматься разработкой игр, работал с Unreal Engine 5 и разрабатывал моды для движка X-Ray (C++, Lua). Вы можете посмотреть мои хобби на соответствующей странице Хобби.
 `,
   },
-  hobbies: {
-    title: 'Мои хобби'
-  },
   portfolio: {
     title: 'Мое портфолио',
     portfolio_site: {
@@ -95,5 +92,8 @@ Git, Perforce
       stack: "PHP, Opencart, JQuery, Twig",
       date: "2019 - 2020"
     },
-  }
+  },
+  hobbies: {
+    title: 'Мои хобби'
+  },
 }

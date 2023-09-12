@@ -42,9 +42,6 @@ I am very responsible on my tasks and goals, open for teamwork, open-minded, eas
 As a hobby I like to work in game development, worked with Unreal Engine 5 and developed mods for X-Ray engine (C++, Lua). You can check out my hobbies at Hobbies page.
 `,
   },
-  hobbies: {
-    title: 'My Hobbies'
-  },
   portfolio: {
     title: 'My Portfolio',
     portfolio_site: {
@@ -95,5 +92,8 @@ As a hobby I like to work in game development, worked with Unreal Engine 5 and d
       stack: "PHP, Opencart, JQuery, Twig",
       date: "2019 - 2020"
     },
+  },
+  hobbies: {
+    title: 'My hobbies'
   }
 }

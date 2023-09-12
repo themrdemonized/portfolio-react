@@ -1,7 +1,7 @@
 import Animatable from "@/components/Animatable"
 import { useDict } from "@/dictionary/DictionaryContext"
-import Head from "next/head"
 import { HeadTags } from "./_app"
+import { Typography } from "@mui/joy"
 
 export default function Hobbies() {
 	const {dict} = useDict()
@@ -12,9 +12,9 @@ export default function Hobbies() {
 		/>
 		<Animatable>
 			<div>
-				<h1>
-					This is hobbies page
-				</h1>
+				<Typography level="h1">
+					{dict.hobbies.title}
+				</Typography>
 			</div>
 		</Animatable>
 	</>

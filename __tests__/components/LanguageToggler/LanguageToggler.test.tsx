@@ -1,10 +1,7 @@
-import { DictProvider, useDict } from '@/dictionary/DictionaryContext';
+import { DictProvider } from '@/dictionary/DictionaryContext';
 import LanguageToggler from "@/components/LanguageToggler/LanguageToggler"
 import { fireEvent, render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import userEvent from '@testing-library/user-event';
-import { CssVarsProvider } from '@mui/joy';
-import Header from '@/components/Header/Header';
 
 describe('LanguageToggler', () => {
 	it('renders', () => {
@@ -27,7 +24,6 @@ describe('LanguageToggler', () => {
 		const locale = window.navigator.language
 		const displayed = container.querySelector('label')?.textContent || "ERROR"
 		const contains = locale.includes(displayed)
-		console.log(locale, displayed)
 		expect(contains).toBeTruthy()
 	})
 
@@ -41,7 +37,6 @@ describe('LanguageToggler', () => {
 		let locale = window.navigator.language
 		let displayed = container.querySelector('label')?.textContent || "ERROR"
 		let contains = locale.includes(displayed)
-		console.log(locale, displayed)
 		expect(contains).toBeTruthy()
 		
 		const input = screen.getByRole('checkbox')
@@ -50,7 +45,6 @@ describe('LanguageToggler', () => {
 		locale = window.navigator.language
 		displayed = container.querySelector('label')?.textContent || "ERROR"
 		contains = locale.includes(displayed)
-		console.log(locale, displayed)
 		expect(contains).toBeFalsy()
 	})
 })
