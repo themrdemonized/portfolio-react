@@ -1,8 +1,6 @@
 import { getDictionaries } from '@/dictionary/DictionaryContext';
-import { fireEvent, render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import { walk, Break, compare } from 'walkjs'
-import _ from 'lodash'
+import { compare } from 'walkjs'
 
 describe('Dictionary', () => {
 	it('contains all entries in all languages', () => {
@@ -23,7 +21,8 @@ describe('Dictionary', () => {
 						const comparisons = compare(targetDict, currentDict, true, undefined, (a, b) => !(a.val === undefined || b.val === undefined))
 						for (const c of comparisons) {
 							if (c.hasDifference) {
-								return [false, `path ${c.path} was ${c.difference} in dictionary ${currentDictName} against ${targetDictName}`]
+								const errorMsg = c.difference === 'added' ? `path ${c.path} is missing in dictionary ${targetDictName} against ${currentDictName}` : `path ${c.path} is missing in dictionary ${currentDictName} against ${targetDictName}`
+								return [false, errorMsg]
 							}
 						}
 					}
