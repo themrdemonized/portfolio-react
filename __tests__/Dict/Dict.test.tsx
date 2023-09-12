@@ -6,13 +6,12 @@ import _ from 'lodash'
 
 describe('Dictionary', () => {
 	it('contains all entries in all languages', () => {
-		let result = true
-		let errorMsg = ""
-		
-		const performCompare = () => {
+		const performCompare = () : [boolean, string] => {
 			const dictionaries = getDictionaries()
+			let result = true
+			let errorMsg = ""
 			if (dictionaries.length <= 1) {
-				return result
+				return [true, ""]
 			} else {
 				for (let i = 0; i < dictionaries.length - 1; i++) {
 					for (let j = i + 1; j < dictionaries.length; j++) {
@@ -20,29 +19,19 @@ describe('Dictionary', () => {
 						const targetDictName = dictionaries[i].name
 						const currentDict = dictionaries[j].dict
 						const currentDictName = dictionaries[j].name
-						walk(targetDict, {
-							onVisit: {
-								callback: node => {
-									const path = node.getPath()
-									if (path.length > 0) {
-										const checkInTarget = _.get(currentDict, path, undefined)
-										if (!checkInTarget) {
-											result = false
-											errorMsg = `path ${path} is missing from dictionary ${currentDictName} but appears in ${targetDictName}`
-											throw new Break()
-										}
-									}
-								}
+
+						const comparisons = compare(targetDict, currentDict, true, undefined, (a, b) => !(a.val === undefined || b.val === undefined))
+						for (const c of comparisons) {
+							if (c.hasDifference) {
+								return [false, `path ${c.path} was ${c.difference} in dictionary ${currentDictName} against ${targetDictName}`]
 							}
-						})
-						if (!result) {
-							return result
 						}
 					}
 				}
 			}
-			return result
+			return [true, ""]
 		}
-		expect(performCompare(), errorMsg).toBeTruthy()
+		let [result, errorMsg] = performCompare()
+		expect(result, errorMsg).toBeTruthy()
 	})
 })
