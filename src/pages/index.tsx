@@ -5,7 +5,7 @@ import { List, ListItem, Typography } from "@mui/joy"
 import ProfilePicWithLinks from "@/components/ProfilePicWithLinks/ProfilePicWithLinks"
 
 export default function Home() {
-	const {dict} = useDict()
+	const {dict, common} = useDict()
 	const nl2p = (text: string) => {
 		const lines = text.trim().split("\n")
 		const newLines = lines.map((value, index) => <Typography level="body-md" marginBottom={1} key={value}>{value}</Typography>)
@@ -41,7 +41,7 @@ export default function Home() {
 					</Typography>
 					{nl2p(dict.index.textBegin)}
 					<Typography level="h2" marginTop={4} marginBottom={4}>{dict.index.skillsTitle}</Typography>
-					{nl2list(dict.index.skills)}
+					{nl2list(common.skills)}
 					<br></br>
 					{nl2list(dict.index.didlist)}
 					<br></br>

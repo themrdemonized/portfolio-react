@@ -36,7 +36,7 @@ import Github from "@mui/icons-material/GitHub"
 import Link from "@mui/icons-material/Link"
 
 export default function Portfolio() {
-	const {dict} = useDict()
+	const {dict, common} = useDict()
 	return (
 		<>
 			<HeadTags
@@ -50,7 +50,7 @@ export default function Portfolio() {
 					<PortfolioCard
 						title={dict.portfolio.portfolio_site.title}
 						description={dict.portfolio.portfolio_site.description}
-						stack={dict.portfolio.portfolio_site.stack}
+						stack={common.portfolio.portfolio_site.stack}
 						date={dict.portfolio.portfolio_site.date}
 						images={[portfolioPic]}
 						links={
@@ -67,7 +67,7 @@ export default function Portfolio() {
 					<PortfolioCard
 						title={dict.portfolio.rescript_elements.title}
 						description={dict.portfolio.rescript_elements.description}
-						stack={dict.portfolio.rescript_elements.stack}
+						stack={common.portfolio.rescript_elements.stack}
 						date={dict.portfolio.rescript_elements.date}
 						images={[rescriptPic1, rescriptPic2, rescriptPic3]}
 						links={
@@ -90,7 +90,7 @@ export default function Portfolio() {
 					<PortfolioCard
 						title={dict.portfolio.dvipraz.title}
 						description={dict.portfolio.dvipraz.description}
-						stack={dict.portfolio.dvipraz.stack}
+						stack={common.portfolio.dvipraz.stack}
 						date={dict.portfolio.dvipraz.date}
 						images={[dviprazPic1, dviprazPic2]}
 						links={
@@ -113,7 +113,7 @@ export default function Portfolio() {
 					<PortfolioCard
 						title={dict.portfolio.dvipraz_lk.title}
 						description={dict.portfolio.dvipraz_lk.description}
-						stack={dict.portfolio.dvipraz_lk.stack}
+						stack={common.portfolio.dvipraz_lk.stack}
 						date={dict.portfolio.dvipraz_lk.date}
 						images={[
 							dviprazLkPic1,
@@ -126,7 +126,7 @@ export default function Portfolio() {
 					<PortfolioCard
 						title={dict.portfolio.uipdv.title}
 						description={dict.portfolio.uipdv.description}
-						stack={dict.portfolio.uipdv.stack}
+						stack={common.portfolio.uipdv.stack}
 						date={dict.portfolio.uipdv.date}
 						images={[uipPic1, uipPic2, uipPic3]}
 						links={
@@ -149,7 +149,7 @@ export default function Portfolio() {
 					<PortfolioCard
 						title={dict.portfolio.lstar.title}
 						description={dict.portfolio.lstar.description}
-						stack={dict.portfolio.lstar.stack}
+						stack={common.portfolio.lstar.stack}
 						date={dict.portfolio.lstar.date}
 						images={[lstarPic1, lstarPic2, lstarPic3]}
 						links={
@@ -172,7 +172,7 @@ export default function Portfolio() {
 					<PortfolioCard
 						title={dict.portfolio.vss.title}
 						description={dict.portfolio.vss.description}
-						stack={dict.portfolio.vss.stack}
+						stack={common.portfolio.vss.stack}
 						date={dict.portfolio.vss.date}
 						images={[vssPic1, vssPic2, vssPic3]}
 						links={
@@ -189,7 +189,7 @@ export default function Portfolio() {
 					<PortfolioCard
 						title={dict.portfolio.asiazip.title}
 						description={dict.portfolio.asiazip.description}
-						stack={dict.portfolio.asiazip.stack}
+						stack={common.portfolio.asiazip.stack}
 						date={dict.portfolio.asiazip.date}
 						images={[asiazipPic1, asiazipPic2, asiazipPic3]}
 						links={

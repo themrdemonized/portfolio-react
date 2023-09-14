@@ -3,12 +3,13 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "concurrently --restart-tries 5 --restart-after 2000 \"next dev\" \"jest --watch\"",
+    "dev": "concurrently --restart-tries 5 --restart-after 2000 \"next dev\" \"jest --watch\" \"node chokidar.js\"",
     "devAll": "concurrently \"next dev\" \"jest --watch\" \"cypress open\"",
     "cypress": "cypress open",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "chokidar": "node chokidar.js"
   },
   "eslintConfig": {
     "rules": {
@@ -31,6 +32,7 @@
     "@types/react": "18.2.21",
     "@types/react-dom": "18.2.7",
     "autoprefixer": "10.4.15",
+    "axios": "^1.5.0",
     "eslint": "8.47.0",
     "eslint-config-next": "13.4.19",
     "framer-motion": "^10.16.1",
@@ -60,6 +62,7 @@
     "@types/react-transition-group": "^4.4.6",
     "babel": "^6.23.0",
     "babel-jest": "^29.6.3",
+    "chokidar": "^3.5.3",
     "clsx": "^2.0.0",
     "concurrently": "^8.2.1",
     "cypress": "^13.1.0",

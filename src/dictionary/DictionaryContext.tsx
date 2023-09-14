@@ -1,5 +1,5 @@
 import { createContext, useContext, useReducer, ReactNode, Dispatch, FC, useEffect } from "react"
-import { useRouter } from 'next/router'
+import common from "@/dictionary/common/common"
 import en from "@/dictionary/data/en"
 import ru from "@/dictionary/data/ru"
 
@@ -85,5 +85,5 @@ export const useDict = () => {
       dict = en
       break
   }
-  return {dict, context}
+  return {dict, context, common}
 };
