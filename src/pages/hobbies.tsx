@@ -160,6 +160,7 @@ export default function Hobbies() {
 				</Typography>
 				<Typography level="body-md" marginBottom={8}>
 					<Image 
+						placeholder="blur"
 						src={ue3Pic}
 						alt="Unreal Engine 5"
 						loading="lazy"
@@ -170,6 +171,7 @@ export default function Hobbies() {
 				</Typography>
 				<div className="flex justify-center mb-4">
 					<Image 
+						placeholder="blur"
 						src={ue1Pic}
 						alt="Unreal Engine 5"
 						loading="lazy"
@@ -177,6 +179,7 @@ export default function Hobbies() {
 				</div>
 				<div className="flex justify-center mb-8">
 					<Image 
+						placeholder="blur"
 						src={ue2Pic}
 						alt="Unreal Engine 5"
 						loading="lazy"
@@ -187,6 +190,7 @@ export default function Hobbies() {
 				</Typography>
 				<div className="flex justify-center mb-4">
 					<Image 
+						placeholder="blur"
 						src={ue4Pic}
 						alt="Unreal Engine 5"
 						loading="lazy"
@@ -194,6 +198,7 @@ export default function Hobbies() {
 				</div>
 				<div className="flex justify-center mb-8">
 					<Image 
+						placeholder="blur"
 						src={ue5Pic}
 						alt="Unreal Engine 5"
 						loading="lazy"
