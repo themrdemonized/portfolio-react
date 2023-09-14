@@ -1,14 +1,14 @@
 .link {
-	transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out!important;
 	text-decoration: none!important;
-	padding-bottom: 1px;
-	border-bottom: 1px solid transparent;
+	padding-bottom: 1px!important;
+	border-bottom: 1px solid transparent!important;
 	&:hover, &:active, &.active {
-		border-bottom: 1px solid rgba(var(--joy-palette-primary-mainChannel) / 1)
+		border-bottom: 1px solid rgba(var(--joy-palette-primary-mainChannel) / 1)!important;
 	}
-	display: inline-block;
+	display: inline-block!important;
 	> * + * {
-		vertical-align: middle;
-		margin-left: 8px;
+		vertical-align: middle!important;
+		margin-left: 8px!important;
 	}
 }
