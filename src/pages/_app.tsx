@@ -34,25 +34,27 @@ export default function App({ Component, pageProps }: AppProps) {
 			>
 			<CssBaseline />
 				<DictProvider>
-					<Head>
-						<meta name="viewport" content="initial-scale=1, width=device-width" />
-					</Head>
-					<Header />
+					<div className='min-h-screen flex flex-col'>
+						<Head>
+							<meta name="viewport" content="initial-scale=1, width=device-width" />
+						</Head>
+						<Header />
 						<Sheet 
 							component="main"
-							className={`flex min-h-screen flex-col items-center justify-between p-4 sm:p-16`}
+							className={`flex-1 flex flex-col items-center justify-between p-4 sm:p-16`}
 						>
 							<AnimatePresence
 								mode='wait'
 								// initial={false}
 							>
 									<Sheet
-										className={`max-w-2xl w-full`}
+										className={`max-w-2xl w-full flex-1 flex flex-col`}
 									>
 										<Component {...pageProps} />
 									</Sheet>
 							</AnimatePresence>
 						</Sheet>
+					</div>
 				</DictProvider>
 		</CssVarsProvider>
 	)
