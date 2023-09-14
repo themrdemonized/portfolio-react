@@ -23,16 +23,20 @@ export default function Hobbies() {
 		let ignore = false
 
 		const getDownloads = async () => {
-			const result = await axios.get('/moddb/mods/stalker-anomaly/addons/weapon-cover-tilt-inertia') 
-			if (!ignore) {
-				const dom = new DOMParser().parseFromString(result.data, "text/html")
-				const downloads = dom.querySelector('#downloadsinfo .table .summary a[href*="downloads"]')
-				if (downloads && downloads.textContent) {
-					const downloadString = downloads.textContent
-					let downloadAmount = parseInt(downloadString.split(' ')[0].replace(',', ''))
-					downloadAmount = Math.floor(Math.floor(downloadAmount / 5000) * 5000 / 1000)
-					setWctDownloads(`${downloadAmount}K`)
+			try {
+				const result = await axios.get('/moddb/mods/stalker-anomaly/addons/weapon-cover-tilt-inertia') 
+				if (!ignore) {
+					const dom = new DOMParser().parseFromString(result.data, "text/html")
+					const downloads = dom.querySelector('#downloadsinfo .table .summary a[href*="downloads"]')
+					if (downloads && downloads.textContent) {
+						const downloadString = downloads.textContent
+						let downloadAmount = parseInt(downloadString.split(' ')[0].replace(',', ''))
+						downloadAmount = Math.floor(Math.floor(downloadAmount / 5000) * 5000 / 1000)
+						setWctDownloads(`${downloadAmount}K`)
+					}
 				}
+			} catch (error) {
+				console.error(error)
 			}
 		}
 		getDownloads()

@@ -20,7 +20,7 @@ export default function LanguageToggler() {
     <Switch
       checked={context.state === 'ru'}
       onChange={() => context.dispatch({
-        type: 'SwitchLanguage',
+        type: 'SwitchLanguageAndSave',
         language: context.state === 'ru' ? 'en' : 'ru'
       })}
     />
