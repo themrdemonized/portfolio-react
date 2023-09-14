@@ -53,7 +53,6 @@ export default function App({ Component, pageProps }: AppProps) {
 									</Sheet>
 							</AnimatePresence>
 						</Sheet>
-					<Footer />
 				</DictProvider>
 		</CssVarsProvider>
 	)

@@ -8,6 +8,8 @@ import Link from "@mui/icons-material/Link"
 import ue1Pic from "@/../public/assets/ue1.jpg"
 import ue2Pic from "@/../public/assets/5_optimized.gif"
 import ue3Pic from "@/../public/assets/ue3.jpg"
+import ue4Pic from "@/../public/assets/ue4.jpg"
+import ue5Pic from "@/../public/assets/ue5.jpg"
 import Image from "next/image"
 
 import axios from 'axios'
@@ -49,17 +51,20 @@ export default function Hobbies() {
 				<Typography level="h1" marginBottom={4}>
 					{dict.hobbies.title}
 				</Typography>
-				<Typography level="body-md" marginBottom={2}>
-					As a favourite hobby I like to create mods for S.T.A.L.K.E.R. Anomaly based on XRay-Monolith engine and work with Unreal Engine 5.
+				<Typography level="body-md" marginBottom={4}>
+					{dict.hobbies.beginning}
+				</Typography>
+				<Typography level="h2" marginBottom={2}>
+					S.T.A.L.K.E.R. Anomaly
 				</Typography>
 				<Typography level="body-md" marginBottom={2}>
-					I strive as a gameplay modder and I really enjoy adding new features and overhauling existing gameplay mechanics. I created over 60 mods for Anomaly, ranging from simple Quality of Life changes to big gameplay overhauls.
+					{dict.hobbies.anomaly.p1}
 				</Typography>
 				<Typography level="body-md" marginBottom={2}>
-					My ModDB page with all my mods: <MyLink href="https://www.moddb.com/mods/stalker-anomaly/addons" target="_blank" rel="noopener noreferrer">https://www.moddb.com/members/themrdemonized/addons</MyLink>
+					{dict.hobbies.anomaly.moddb_page} <MyLink href="https://www.moddb.com/mods/stalker-anomaly/addons" target="_blank" rel="noopener noreferrer">https://www.moddb.com/members/themrdemonized/addons</MyLink>
 				</Typography>
 				<Typography level="body-md" marginBottom={0}>
-					One of my biggest projects for Anomaly is <b>Perk Based Artefacts</b> mod. Its a massive 10k lines of Lua code mod that overhauls whole artefact system by adding fully scripted unique special abilities and perks, taking inspiration from games such as Fallout, Borderlands, etc.
+					{dict.hobbies.anomaly.pba1} <b>{dict.hobbies.anomaly.pba2}</b> {dict.hobbies.anomaly.pba3}
 				</Typography>
 				<Typography level="body-md" marginBottom={0}>
 					<MyLink target="_blank" rel="noopener noreferrer" href="https://github.com/themrdemonized/STALKER-Anomaly-Perk-Based-Artefacts">
@@ -74,7 +79,7 @@ export default function Hobbies() {
 					</MyLink>
 				</Typography>
 				<Typography level="body-md" marginBottom={4}>
-					Here are some showcases of the mod made by Anomaly Youtubers.
+					{dict.hobbies.anomaly.pba_showcase}
 				</Typography>
 				<div className="mb-2">
 					<div className="flex justify-center"><iframe width="560" height="315" src="https://www.youtube.com/embed/nvtcv7ba154?si=l4xWfiPwj6hwwU7B" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe></div>
@@ -82,11 +87,11 @@ export default function Hobbies() {
 				<div className="mb-2">
 					<div className="flex justify-center"><iframe width="560" height="315" src="https://www.youtube.com/embed/j2KsV3QEkto?si=lu2omNa9pm8NdQId&amp;start=18" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe></div>
 				</div>
-				<div className="mb-6">
+				<div className="mb-8">
 					<div className="flex justify-center"><iframe width="560" height="315" src="https://www.youtube.com/embed/Shqkhb9z9BA?si=dTENWJL20dkgRI94" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe></div>
 				</div>
 				<Typography level="body-md" marginBottom={0}>
-					My most popular mod for Anomaly is <b>Weapon Cover Tilt</b>. This mod adds procedural first person animations that raise the gun up when player is near a wall. Currently it has over <b>{wctDownloads}</b> downloads and counting.
+					{dict.hobbies.anomaly.wct1} <b>{dict.hobbies.anomaly.wct2}</b>{dict.hobbies.anomaly.wct3} <b>{wctDownloads}</b> {dict.hobbies.anomaly.wct4}
 				</Typography>
 				<Typography level="body-md" marginBottom={0}>
 					<MyLink target="_blank" rel="noopener noreferrer" href="https://github.com/themrdemonized/STALKER-ANOMALY-Weapon-Cover-Tilt">
@@ -100,7 +105,7 @@ export default function Hobbies() {
 						<span>ModDB</span>
 					</MyLink>
 				</Typography>
-				<div className="flex justify-center mb-6">
+				<div className="flex justify-center mb-8">
 					<Image 
 						src="https://media.moddb.com/images/downloads/1/234/233184/1.gif"
 						width={480}
@@ -110,10 +115,10 @@ export default function Hobbies() {
 					/>
 				</div>
 				<Typography level="body-md" marginBottom={0}>
-					Also I create tools for other modders to help with development.
+					{dict.hobbies.anomaly.tools1}
 				</Typography>
 				<Typography level="body-md" marginBottom={0}>
-					Here for example I made HUD editor that allows to change position and rotation of 3rd person model of weapon with a simple mouse drag. Also it allows manipulating models in 3rd person mode on an NPC model for precise repositions.
+					{dict.hobbies.anomaly.tools2}
 				</Typography>
 				<Typography level="body-md" marginBottom={2}>
 					<MyLink target="_blank" rel="noopener noreferrer" href="https://www.moddb.com/mods/stalker-anomaly/addons/draggable-hud-editor">
@@ -124,16 +129,16 @@ export default function Hobbies() {
 				<div className="mb-2">
 					<div className="flex justify-center"><iframe width="560" height="315" src="https://www.youtube.com/embed/sYUMyUDYZmg?si=8X1yWeXo4rYi-o_L" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe></div>
 				</div>
-				<div className="mb-6">
+				<div className="mb-8">
 					<div className="flex justify-center"><iframe width="560" height="315" src="https://www.youtube.com/embed/REU6a9yMJOU?si=5VXLvYDutNMaK8gf" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe></div>
 				</div>
 				<Typography level="body-md" marginBottom={0}>
-					I maintain my own fork of XRay-Monolith engine (C++) that contains new features added to the engine, as well as features developed and donated by wonderful S.T.A.L.K.E.R. Anomaly community members. The engine is built using Github Actions CI with Visual Studio 2022.
+					{dict.hobbies.anomaly.xray}
 				</Typography>
 				<Typography level="body-md" marginBottom={4}>
 					<MyLink target="_blank" rel="noopener noreferrer" href="https://github.com/themrdemonized/xray-monolith">
 						<Github />
-						<span>Github link to XRay-Monolith repo</span>
+						<span>Github</span>
 					</MyLink>
 				</Typography>
 				
@@ -141,7 +146,7 @@ export default function Hobbies() {
 					Unreal Engine
 				</Typography>
 				<Typography level="body-md" marginBottom={0}>
-					In October 2022 I was contacted by NightmareFuelGames and was offered to join them in development of a survival co-op FPS game, inspired by S.T.A.L.K.E.R, DayZ, Hunt: Showdown and Escape From Tarkov.
+					{dict.hobbies.ue.p1}
 				</Typography>
 				<Typography level="body-md" marginBottom={2}>
 					<MyLink target="_blank" rel="noopener noreferrer" href="https://nightmarefuelgames.com/">
@@ -149,7 +154,7 @@ export default function Hobbies() {
 						<span>NightmareFuelGames</span>
 					</MyLink>
 				</Typography>
-				<Typography level="body-md" marginBottom={4}>
+				<Typography level="body-md" marginBottom={8}>
 					<Image 
 						src={ue3Pic}
 						alt="Unreal Engine 5"
@@ -157,11 +162,35 @@ export default function Hobbies() {
 					/>
 				</Typography>
 				<Typography level="body-md" marginBottom={2}>
-					I joined NightmareFuelGames as a Lead Programmer. My goal here is to work on Animation Programming, Items Interaction Programming such as weapons, PDA and melee items, participate in code reviews and maintain our project repo in Perforce 
+					{dict.hobbies.ue.goals}
 				</Typography>
 				<div className="flex justify-center mb-4">
 					<Image 
+						src={ue1Pic}
+						alt="Unreal Engine 5"
+						loading="lazy"
+					/>
+				</div>
+				<div className="flex justify-center mb-8">
+					<Image 
 						src={ue2Pic}
+						alt="Unreal Engine 5"
+						loading="lazy"
+					/>
+				</div>
+				<Typography level="body-md" marginBottom={2}>
+					{dict.hobbies.ue.finish}
+				</Typography>
+				<div className="flex justify-center mb-4">
+					<Image 
+						src={ue4Pic}
+						alt="Unreal Engine 5"
+						loading="lazy"
+					/>
+				</div>
+				<div className="flex justify-center mb-8">
+					<Image 
+						src={ue5Pic}
 						alt="Unreal Engine 5"
 						loading="lazy"
 					/>
